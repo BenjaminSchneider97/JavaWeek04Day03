@@ -21,20 +21,22 @@ public class Main {
         Customer[] customers = new Customer[1000];
 
         for(int i = 0; i < customers.length; i++){
-            customers[i] = new Customer(names[random.nextInt(names.length - 1)], random.nextInt(2));
+            customers[i] = new Customer(names[random.nextInt(names.length)], random.nextInt(2));
         }
 
         for(int i = 0; i < customers.length; i++){
-            for(int j = 1; j < customers.length; j++){
-                if(customers[i].equals(customers[j])){
+            for(int j = i+1; j < customers.length; j++){
+                if(customers[i].name.equals(customers[j].name) && customers[i].id == customers[j].id){
                     customers[j].name = "ESSEN";
                 }
             }
         }
 
+        int counter = 0;
         for(int i = 0; i < customers.length; i++){
             if(!customers[i].name.equalsIgnoreCase("ESSEN")){
-                System.out.println("Name: " + customers[i].name + ", ID: " + customers[i].id);
+                counter++;
+                System.out.println(counter + ") Name: " + customers[i].name + ", ID: " + customers[i].id);
             }
         }
     }
