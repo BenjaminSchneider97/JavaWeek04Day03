@@ -21,7 +21,7 @@ public class Main {
         Customer[] customers = new Customer[1000];
 
         for(int i = 0; i < customers.length; i++){
-            customers[i] = new Customer(names[random.nextInt(names.length)], random.nextInt(2));
+            customers[i] = new Customer(names[random.nextInt(names.length)], random.nextInt(100));
         }
 
         for(int i = 0; i < customers.length; i++){
