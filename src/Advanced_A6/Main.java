@@ -24,4 +24,25 @@ package Advanced_A6;
  * https://en.wikipedia.org/wiki/List_of_members_of_the_European_Parliament_for_Austria,_2014%E2%80%9319
  */
 public class Main {
+
+    public static String calmString(String speech){
+        String result = "";
+        //String[] words = speech.split(" ");
+        for(int i=0; i<speech.length()-5; i++){
+            if(speech.substring(i, i+5).equalsIgnoreCase("ibiza")){
+                i=i+5-1;
+            }else if(speech.substring(i, i+1).equals("!")) {
+            }else
+            result += speech.substring(i, i+1);
+            result = result.replaceAll("  ", " ");
+        }
+        return result;
+    }
+
+    public static void main(String[] args) {
+        String speech = "In IBIZA is es wunderschön! Den Namen kann man auch so (Ibiza) schreiben! Oder aber auch ibiza";
+        String newSpeech = calmString(speech);
+        System.out.println(newSpeech);
+
+    }
 }
