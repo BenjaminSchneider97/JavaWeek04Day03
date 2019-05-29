@@ -14,8 +14,9 @@ class MainTest {
 
     @org.junit.jupiter.api.Test
     void calmString() {
-        String word = "Test!";
-        assertEquals("Test", calmString(word));
+        assertEquals("Strand von ", Main.calmString("Strand von Ibiza"));
+        assertEquals("Wirklich blöder Test", Main.calmString("Wirklich blöder Test!"));
+        
     }
 
     @org.junit.jupiter.api.Test
