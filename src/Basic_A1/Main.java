@@ -11,6 +11,6 @@ public class Main {
         System.out.println(java.util.Arrays.toString(numbers));
 
         System.out.println("The two biggest numbers are " + numbers[numbers.length-2] + " and " + numbers[numbers.length-1]);
-        
+
     }
 }
